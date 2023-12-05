@@ -1,0 +1,372 @@
+body {
+  font-size: 18px;
+  font-family: "Barlow", "Fraunces";
+  margin: 0px;
+}
+
+header {
+  height: 800px;
+  background-image: url("image/photos/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .nav__burger {
+  display: none;
+}
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 40px;
+  padding: 34px 0px;
+}
+header .nav__img {
+  height: 33px;
+  width: 177px;
+}
+header .nav__barre .barre__btn {
+  width: 66px;
+  height: 25px;
+  margin-left: 47px;
+  background-color: transparent;
+  border: none;
+}
+header .nav__barre .barre__btn a {
+  font-family: "Barlow";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  color: hsl(0, 0%, 100%);
+}
+header .nav__barre .barre__contact {
+  height: 56px;
+  width: 140px;
+  background-color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 25px;
+  margin-left: 47px;
+}
+header .nav__barre .barre__contact a {
+  font-family: "Fraunces";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #24303E;
+}
+header .nav__barre .barre__contact:hover {
+  background-color: hsl(0, 0%, 100%);
+  opacity: 25.37%;
+}
+header .nav__barre .barre__contact:hover a {
+  color: hsl(0, 0%, 100%);
+}
+header .header__h1 {
+  text-align: center;
+  margin: 105px 0px;
+  font-family: "Fraunces";
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 69px;
+  letter-spacing: 8.75px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+}
+header .header__img {
+  text-align: center;
+  margin: 96.54px 0px;
+  width: 100%;
+}
+
+.textImage {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+}
+.textImage__image {
+  width: 50%;
+}
+.textImage__image img {
+  width: 100%;
+  height: 100%;
+}
+.textImage__text {
+  width: 50%;
+}
+.textImage__text .text__align {
+  width: 445px;
+  margin-top: 158px;
+  margin-left: 165px;
+}
+.textImage__text .text__align h2 {
+  font-family: "Fraunces";
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 49px;
+  text-align: left;
+  color: #24303E;
+  margin: 0px;
+}
+.textImage__text .text__align p {
+  font-family: "Barlow";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  color: #808397;
+  margin: 0px;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.textImage__text .text__align a {
+  font-family: "Fraunces";
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 25px;
+  text-align: left;
+  color: #24303E;
+  border-bottom: 10px solid rgba(250, 212, 0, 0.25);
+  border-radius: 5px;
+}
+
+.ImageImage {
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+}
+.ImageImage .Image--1 {
+  background-image: url("image/photos/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+.ImageImage .Image--1 h2 {
+  color: #24554A;
+}
+.ImageImage .Image--1 p {
+  color: #3E7467;
+}
+.ImageImage .Image--2 {
+  background-image: url("image/photos/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+.ImageImage .Image--2 h2 {
+  color: #052C3B;
+}
+.ImageImage .Image--2 p {
+  color: #19536C;
+}
+.ImageImage__center {
+  margin: auto;
+  width: 339px;
+  margin-top: 398px;
+  text-align: center;
+}
+.ImageImage__center h2 {
+  font-family: "Fraunces";
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 35px;
+}
+.ImageImage__center p {
+  font-family: Barlow;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 27px;
+  text-align: center;
+}
+
+.client {
+  margin-top: 160px;
+}
+.client__titles {
+  margin: 0;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 5px;
+  color: #A7AAAD;
+  text-transform: uppercase;
+  margin-bottom: 51px;
+}
+.client .client__profil {
+  display: flex;
+  justify-content: center;
+}
+.client .client__profil .profil {
+  width: 350px;
+  text-align: center;
+  margin: 30px;
+}
+.client .client__profil .profil__img {
+  width: 72px;
+  height: 72px;
+  border-radius: 40px;
+  margin-bottom: 58px;
+}
+.client .client__profil .profil__text {
+  margin: 0px;
+  font-family: "Barlow";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #5B636D;
+  margin-bottom: 69px;
+}
+.client .client__profil .profil__name {
+  font-family: "Fraunces";
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 22px;
+  text-align: center;
+  color: #24303E;
+  margin: 0px;
+  margin-bottom: 9px;
+}
+.client .client__profil .profil__metier {
+  font-family: "Barlow";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #A7AAAD;
+  margin: 0px;
+}
+
+footer {
+  margin-top: 160px;
+  background-color: #90D4C6;
+}
+footer .footer__img {
+  display: flex;
+}
+footer .footer__img img {
+  width: 25%;
+  height: 447px;
+}
+footer .footer__lien {
+  height: 350px;
+}
+footer .footer__lien .lien__center {
+  display: flex;
+  width: 297px;
+  margin: auto;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 72px;
+}
+footer .footer__lien .lien__center .center__logoVert {
+  width: 170px;
+  height: 33px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+footer .footer__lien .lien__center .center__lien {
+  font-family: "Barlow";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #458D7E;
+}
+footer ul {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 88px;
+}
+footer li {
+  list-style-type: none;
+}
+footer .icon__footer {
+  width: 164px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 375px) {
+  header {
+    height: 538px;
+    background-position: center;
+  }
+  header .nav__burger {
+    display: block;
+  }
+  header .nav {
+    padding-bottom: 0px;
+    padding-top: 32px;
+    margin: 0px 24px;
+  }
+  header .header__h1 {
+    font-size: 40px;
+    margin-top: 88px;
+    margin-bottom: 52px;
+  }
+  header .header__img {
+    margin-top: 0px;
+  }
+  header .nav__img {
+    width: 123.64px;
+    height: 24px;
+  }
+  header .nav__barre {
+    display: none;
+  }
+  .textImage {
+    flex-direction: column;
+    height: auto;
+  }
+  .textImage--mobile {
+    flex-direction: column-reverse;
+  }
+  .textImage__image {
+    width: 100%;
+    height: 312px;
+  }
+  .textImage__text {
+    width: 100%;
+  }
+  .textImage__text .text__align {
+    width: 327px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin: 64px 24px;
+  }
+  .ImageImage {
+    height: 1200px;
+    flex-direction: column;
+  }
+  .ImageImage .Image--1, .ImageImage .Image--2 {
+    height: 600px;
+    width: 100%;
+    background-position: center;
+  }
+  .client {
+    margin-top: 64px;
+  }
+  .client .client__titles {
+    margin-bottom: 0px;
+  }
+  .client__profil {
+    flex-direction: column;
+  }
+  .client__profil .profil {
+    width: 327px !important;
+    margin: 64px auto 0px auto !important;
+  }
+  footer {
+    margin-top: 86px;
+  }
+  footer .footer__img {
+    flex-wrap: wrap;
+  }
+  footer .footer__img img {
+    height: 50%;
+    width: 50%;
+  }
+  footer .footer__lien .lien__center {
+    margin-top: 64px;
+  }
+}/*# sourceMappingURL=style.css.map */
