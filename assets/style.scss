@@ -18,6 +18,17 @@ $Grayish_blue: hsl(210, 4%, 67%);
 $White: hsl(0, 0%, 100%);
 
 
+// Width
+
+$mobile : 375px;
+
+@mixin max-width ($width) {
+    @media (max-width : $width) {
+        @content;
+    }
+}
+
+
 body {
     font-size: 18px;
     font-family: 'Barlow', 'Fraunces';
@@ -29,13 +40,35 @@ header {
     background-image: url("image/photos/image-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    .nav__burger{
-        display : none;
+
+    @include max-width($mobile) {
+        height: 538px;
+        background-position: center;
     }
+
+    .nav__burger {
+        display: none;
+
+        @include max-width($mobile) {
+            display: block;
+        }
+    }
+
     .nav {
+        @include max-width($mobile) {
+            padding-bottom: 0px;
+            padding-top: 32px;
+            margin: 0px 24px;
+        }
+
         &__img {
             height: 33px;
             width: 177px;
+
+            @include max-width($mobile) {
+                width: 123.64px;
+                height: 24px;
+            }
         }
 
         display : flex;
@@ -44,6 +77,10 @@ header {
         padding : 34px 0px;
 
         &__barre {
+            @include max-width($mobile) {
+                display: none;
+            }
+
             .barre__btn {
                 width: 66px;
                 height: 25px;
@@ -77,14 +114,10 @@ header {
                     color: #24303E;
 
                 }
-
                 &:hover {
-                    background-color: $White;
-                    opacity: 25.37%;
-
-                    a {
-                        color: $White;
-                        //revenir pour terminer le bouton correctement
+                    background-color: rgba(255,255,255,0.25);
+                    a{
+                        color : white;
                     }
                 }
             }
@@ -101,22 +134,43 @@ header {
         letter-spacing: 8.75px;
         text-transform: uppercase;
         color: $White;
+
+        @include max-width($mobile) {
+            font-size: 40px;
+            margin-top: 88px;
+            margin-bottom: 52px;
+        }
     }
 
     .header__img {
         text-align: center;
         margin: 96.54px 0px;
         width: 100%;
+
+        @include max-width($mobile) {
+            margin-top: 0px;
+        }
     }
 }
+
 
 .textImage {
     display: flex;
     flex-direction: row;
     height: 600px;
 
+    @include max-width($mobile) {
+        flex-direction: column;
+        height: auto;
+    }
+
     &__image {
         width: 50%;
+
+        @include max-width($mobile) {
+            width: 100%;
+            height: 312px;
+        }
 
         img {
             width: 100%;
@@ -127,10 +181,21 @@ header {
     &__text {
         width: 50%;
 
+        @include max-width($mobile) {
+            width: 100%;
+        }
+
         .text__align {
             width: 445px;
             margin-top: 158px;
             margin-left: 165px;
+
+            @include max-width($mobile) {
+                width: 327px;
+                margin-top: 0px;
+                margin-left: 0px;
+                margin: 64px 24px;
+            }
 
             h2 {
                 font-family: 'Fraunces';
@@ -163,18 +228,55 @@ header {
                 line-height: 25px;
                 text-align: left;
                 color: #24303E;
-                border-bottom: 10px solid rgba(250, 212, 0, 0.25);
-                border-radius: 5px;
-                // Refaire mieux le soulignement
+                margin-left: 5px;
+
+                .soulignement {
+                    height: 10px;
+                    width: 100px;
+                    opacity: 25%;
+                    border-radius: 15px;
+                    margin-top: -10px;
+                }
+
+                .soulignement--yellow {
+                    background-color: #FAD400;
+                }
+
+                .soulignement--red {
+                    background-color: #FE7766;
+                }
+
+                &:hover {
+                    .soulignement--yellow {
+                        opacity: 100%;
+                    }
+
+                    .soulignement--red {
+                        opacity: 100%;
+                    }
+                }
             }
         }
     }
 }
 
+@include max-width($mobile) {
+    .textImage--mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
 .ImageImage {
     display: flex;
     flex-direction: row;
     height: 600px;
+
+    @include max-width($mobile) {
+        height: 1200px;
+        flex-direction: column;
+    }
 
     .Image--1 {
         background-image: url("image/photos/image-graphic-design.jpg");
@@ -207,6 +309,16 @@ header {
         }
     }
 
+    @include max-width($mobile) {
+
+        .Image--1,
+        .Image--2 {
+            height: 600px;
+            width: 100%;
+            background-position: center;
+        }
+    }
+
     &__center {
         margin: auto;
         width: 339px;
@@ -233,8 +345,13 @@ header {
     }
 }
 
+
 .client {
     margin-top: 160px;
+
+    @include max-width($mobile) {
+        margin-top: 64px;
+    }
 
     &__titles {
         margin: 0;
@@ -247,16 +364,29 @@ header {
         color: #A7AAAD;
         text-transform: uppercase;
         margin-bottom: 51px;
+
+        @include max-width($mobile) {
+            margin-bottom: 0px;
+        }
     }
 
     .client__profil {
         display: flex;
         justify-content: center;
 
+        @include max-width($mobile) {
+            flex-direction: column;
+        }
+
         .profil {
             width: 350px;
             text-align: center;
             margin: 30px;
+
+            @include max-width($mobile) {
+                width: 327px !important;
+                margin: 64px auto 0px auto !important;
+            }
 
             &__img {
                 width: 72px;
@@ -299,16 +429,30 @@ header {
 
 }
 
+
 footer {
     margin-top: 160px;
     background-color: #90D4C6;
 
+    @include max-width($mobile) {
+        margin-top: 86px;
+    }
+
     .footer__img {
         display: flex;
+
+        @include max-width($mobile) {
+            flex-wrap: wrap;
+        }
 
         img {
             width: 25%;
             height: 447px;
+
+            @include max-width($mobile) {
+                height: 50%;
+                width: 50%;
+            }
         }
     }
 
@@ -322,6 +466,10 @@ footer {
             flex-direction: column;
             text-align: center;
             margin-top: 72px;
+
+            @include max-width($mobile) {
+                margin-top: 64px;
+            }
 
             .center__logoVert {
                 width: 170px;
@@ -356,108 +504,12 @@ footer {
         margin: auto;
         display: flex;
         justify-content: space-between;
-    }
-}
-
-
-@media (max-width : 375px) {
-    header {
-        .nav__burger{
-            display : block;
-        }
-        .nav{
-            padding-bottom : 0px;
-            padding-top : 32px;
-            margin : 0px 24px;
-        }
-        height : 538px;
-        background-position : center;
-        .header__h1{
-            font-size: 40px;
-            margin-top : 88px;
-            margin-bottom : 52px;
-        }
-        .header__img{
-            margin-top : 0px;
-        }
-        .nav {
-            
-
-            &__img {
-                width: 123.64px;
-                height: 24px;
-            }
-
-            &__barre {
-                display: none;
-            }
-
-        }
-    }
-
-    .textImage {
-        flex-direction: column;
-        height : auto;
-    }
-    .textImage--mobile{
-        flex-direction : column-reverse;
-    }
-    .textImage__image{
-        width : 100%;
-        height : 312px;
-    }
-    .textImage__text{
-        width : 100%;
-        .text__align{
-            width : 327px;
-            margin-top : 0px;
-            margin-left : 0px;
-            margin : 64px 24px;
-    }} 
-    .ImageImage{
-        height : 1200px;
-        flex-direction : column;
-        .Image--1 , .Image--2{
-            height : 600px;
-            width : 100%;
-            background-position : center;
-        }
-    }
-    .client {
-        margin-top : 64px;
-        .client__titles{
-            margin-bottom : 0px;
-        }
-        &__profil {
-            flex-direction: column;
-
-            .profil {
-                width: 327px !important;
-                margin : 64px auto 0px auto!important;
-
+        .btn__icon{
+            background-color: transparent;
+            border : none;
+            &:hover svg path{
+                fill : $White;
             }
         }
-    }
-
-    footer {
-        margin-top: 86px;
-
-        .footer__img {
-            flex-wrap: wrap;
-
-            img {
-                height: 50%;
-                width: 50%;
-            }
-        }
-
-        .footer__lien {
-
-            .lien__center {
-                margin-top: 64px;
-            }
-        }
-
-
     }
 }
