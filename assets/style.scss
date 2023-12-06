@@ -8,6 +8,8 @@ $Dark_blue : hsl(198, 62%, 26%);
 // (photography text)
 $Dark_moderate_cyan: hsl(168, 34%, 41%);
 // (footer)
+$yellow_opacity : rgba(250, 212, 0, 0.25);;
+$red_opacity : hsla(7, 99%, 70%, 0.25);
 
 // Neutral
 
@@ -46,24 +48,22 @@ header {
         background-position: center;
     }
 
-    .nav__burger {
+    .burger__btn {
         display: none;
-        
-        .burger__btn{
-            background-color : transparent;
-            border : none;
-            float : right ;
-            &:hover svg path{
-                fill : rgba(255,255,255,0.5);
-            }
-        
+        background-color: transparent;
+        border: none;
+        float: right;
+
+        &:hover svg path {
+            fill: rgba(255, 255, 255, 0.5);
         }
-        
 
         @include max-width($mobile) {
             display: block;
         }
+
     }
+
     .nav {
         @include max-width($mobile) {
             padding-bottom: 0px;
@@ -90,47 +90,53 @@ header {
             @include max-width($mobile) {
                 display: none;
             }
-
-            .barre__btn {
-                width: 66px;
-                height: 25px;
-                margin-left: 47px;
-                background-color: transparent;
-                border: none;
-
-                a {
-                    font-family: 'Barlow';
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 25px;
-                    color: $White;
+            ul{
+                list-style-type: none;
+                display: flex;
+                margin : 0px;
+                .barre__btn {
+                    width: 66px;
+                    height: 25px;
+                    margin-left: 47px;
+                    background-color: transparent;
+                    border: none;
+                    margin-top : 12px;
+                    a {
+                        font-family: 'Barlow';
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 25px;
+                        color: $White;
+                    }
                 }
-            }
-
-            .barre__contact {
-                height: 56px;
-                width: 140px;
-                background-color: $White;
-                border: none;
-                border-radius: 25px;
-                margin-left: 47px;
-
-                a {
-                    font-family: 'Fraunces';
-                    font-size: 15px;
-                    font-weight: 700;
-                    line-height: 25px;
-                    text-transform: uppercase;
-                    color: #24303E;
-
-                }
-                &:hover {
-                    background-color: rgba(255,255,255,0.25);
-                    a{
-                        color : white;
+                .barre__contact {
+                    height: 56px;
+                    width: 140px;
+                    background-color: $White;
+                    border: none;
+                    border-radius: 25px;
+                    margin-left: 47px;
+                    text-align : center;
+                    a {
+                        font-family: 'Fraunces';
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 56px;
+                        text-transform: uppercase;
+                        color: $Dark_blue;
+    
+                    }
+    
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.25);
+    
+                        a {
+                            color: white;
+                        }
                     }
                 }
             }
+            
         }
     }
 
@@ -213,7 +219,7 @@ header {
                 font-weight: 900;
                 line-height: 49px;
                 text-align: left;
-                color: #24303E;
+                color: $Dark_blue;
                 margin: 0px;
 
             }
@@ -224,7 +230,7 @@ header {
                 font-weight: 600;
                 line-height: 30px;
                 text-align: left;
-                color: #808397;
+                color: $Dark_grayish_blue;
                 margin: 0px;
                 margin-top: 32px;
                 margin-bottom: 40px;
@@ -237,38 +243,27 @@ header {
                 font-weight: 900;
                 line-height: 25px;
                 text-align: left;
-                color: #24303E;
+                color: $Very_dark_desaturated_blue;
                 margin-left: 5px;
-
-                .soulignement {
-                    height: 10px;
-                    width: 100px;
-                    opacity: 25%;
-                    border-radius: 15px;
-                    margin-top: -10px;
-                }
-
-                .soulignement--yellow {
-                    background-color: #FAD400;
-                }
-
-                .soulignement--red {
-                    background-color: #FE7766;
-                }
-
+            }
+            .soulignement--yellow{
+                text-decoration: underline 10px $yellow_opacity;
                 &:hover {
-                    .soulignement--yellow {
-                        opacity: 100%;
-                    }
-
-                    .soulignement--red {
-                        opacity: 100%;
-                    }
+                    text-decoration: underline 10px $Yellow;
                 }
+            }
+            .soulignement--red{
+                text-decoration: underline 10px $red_opacity;
+                &:hover {
+                    text-decoration: underline 10px $Soft_red;
+                }
+            }
             }
         }
     }
-}
+
+
+
 
 @include max-width($mobile) {
     .textImage--mobile {
@@ -295,11 +290,11 @@ header {
         width: 50%;
 
         h2 {
-            color: #24554A;
+            color: $Dark_desaturated_cyan;
         }
 
         p {
-            color: #3E7467;
+            color: $Dark_desaturated_cyan;
         }
     }
 
@@ -310,12 +305,12 @@ header {
         width: 50%;
 
         h2 {
-            color: #052C3B;
+            color: $Dark_blue;
             ;
         }
 
         p {
-            color: #19536C;
+            color: $Dark_moderate_cyan;
         }
     }
 
@@ -371,7 +366,7 @@ header {
         font-weight: 900;
         line-height: 25px;
         letter-spacing: 5px;
-        color: #A7AAAD;
+        color: $Grayish_blue;
         text-transform: uppercase;
         margin-bottom: 51px;
 
@@ -411,7 +406,7 @@ header {
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 32px;
-                color: #5B636D;
+                color: $Very_dark_grayish_blue;
                 margin-bottom: 69px;
             }
 
@@ -421,7 +416,7 @@ header {
                 font-weight: 900;
                 line-height: 22px;
                 text-align: center;
-                color: #24303E;
+                color: $Very_dark_desaturated_blue;
                 margin: 0px;
                 margin-bottom: 9px;
             }
@@ -431,7 +426,7 @@ header {
                 font-size: 14px;
                 font-weight: 600;
                 line-height: 25px;
-                color: #A7AAAD;
+                color: $Grayish_blue;
                 margin: 0px;
             }
         }
@@ -443,6 +438,7 @@ header {
 footer {
     margin-top: 160px;
     background-color: #90D4C6;
+    ;
 
     @include max-width($mobile) {
         margin-top: 86px;
@@ -493,9 +489,9 @@ footer {
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 25px;
-                color: #458D7E;
-                &:hover{
-                    color : white;
+                color: $Dark_desaturated_cyan;
+                &:hover {
+                    color: $White;
                 }
             }
         }
@@ -517,11 +513,13 @@ footer {
         margin: auto;
         display: flex;
         justify-content: space-between;
-        .btn__icon{
+
+        .btn__icon {
             background-color: transparent;
-            border : none;
-            &:hover svg path{
-                fill : $White;
+            border: none;
+
+            &:hover svg path {
+                fill: $White;
             }
         }
     }

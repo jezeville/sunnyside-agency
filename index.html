@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
+
     <link rel="icon" type="image/png" sizes="32x32" href="assets/image/icons/favicon-32x32 (3).png">
     <link href="assets/style.css" rel="stylesheet">
     <title>Sunnyside agency landing page</title>
@@ -17,25 +18,28 @@
 
 <body>
     <header>
-        <div class="nav">
+        <section class="nav">
             <img class="nav__img" src="assets/image/icons/sunnyside.png" alt="nom de la marque">
 
-            <div class="nav__burger">
-                <button class="burger__btn">
-                    <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+
+            <button class="burger__btn">
+                <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
+                </svg>
+            </button>
+
             <nav class="nav__barre">
-                <button class="barre__btn"><a>About</a></button>
-                <button class="barre__btn"><a>Services</a></button>
-                <button class="barre__btn"><a>Projects</a></button>
-                <button class="barre__contact"><a>Contact</a></button>
+                <ul>
+                    <li class="barre__btn"><a>About</a></li>
+                    <li class="barre__btn"><a>Services</a></li>
+                    <li class="barre__btn"><a>Projects</a></li>
+                    <li class="barre__contact"><a>Contact</a></li>
+                </ul>
             </nav>
-        </div>
+        </section>
         <h1 class="header__h1">We are creatives</h1>
-        <div class="header__img"><img class="" src="assets/image/icons/icon-arrow-down.svg" alt="fleche vers le bas">
+        <div class="header__img">
+            <img class="" src="assets/image/icons/icon-arrow-down.svg" alt="fleche vers le bas">
         </div>
     </header>
     <main>
@@ -49,7 +53,7 @@
                     <p>We are a full-service creative agency specializing in helping brands grow fast.
                         Engage your clients through compelling visuals that do most of the marketing for you.</p>
 
-                    <a>Learn more<div class="soulignement soulignement--yellow"></div></a>
+                    <a class="soulignement--yellow">Learn more</a>
 
                 </div>
             </div>
@@ -72,7 +76,7 @@
                         copywriters,
                         we’ll build and extend your brand in digital places.</p>
 
-                    <a>Learn more<div class="soulignement soulignement--red"></div></a>
+                    <a class="soulignement--red">Learn more</a>
 
                 </div>
             </div>
