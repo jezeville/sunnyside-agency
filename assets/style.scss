@@ -48,12 +48,22 @@ header {
 
     .nav__burger {
         display: none;
+        
+        .burger__btn{
+            background-color : transparent;
+            border : none;
+            float : right ;
+            &:hover svg path{
+                fill : rgba(255,255,255,0.5);
+            }
+        
+        }
+        
 
         @include max-width($mobile) {
             display: block;
         }
     }
-
     .nav {
         @include max-width($mobile) {
             padding-bottom: 0px;
@@ -484,6 +494,9 @@ footer {
                 font-weight: 600;
                 line-height: 25px;
                 color: #458D7E;
+                &:hover{
+                    color : white;
+                }
             }
         }
     }

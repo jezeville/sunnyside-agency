@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="assets/image/icons/favicon-32x32 (3).png">
     <link href="assets/style.css" rel="stylesheet">
     <title>Sunnyside agency landing page</title>
@@ -20,7 +19,14 @@
     <header>
         <div class="nav">
             <img class="nav__img" src="assets/image/icons/sunnyside.png" alt="nom de la marque">
-            <img class="nav__burger" src="assets/image/icons/icon-hamburger.svg" alt="haburger">
+
+            <div class="nav__burger">
+                <button class="burger__btn">
+                    <svg width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
             <nav class="nav__barre">
                 <button class="barre__btn"><a>About</a></button>
                 <button class="barre__btn"><a>Services</a></button>
@@ -53,7 +59,7 @@
         </section>
 
 
-        
+
         <section class="textImage">
             <div class="textImage__image">
                 <img src="assets/image/photos/image-stand-out.jpg" alt="photo d'un verre">

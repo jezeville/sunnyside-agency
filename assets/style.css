@@ -19,6 +19,14 @@ header {
 header .nav__burger {
   display: none;
 }
+header .nav__burger .burger__btn {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+header .nav__burger .burger__btn:hover svg path {
+  fill: rgba(255, 255, 255, 0.5);
+}
 @media (max-width: 375px) {
   header .nav__burger {
     display: block;
@@ -413,6 +421,9 @@ footer .footer__lien .lien__center .center__lien {
   font-weight: 600;
   line-height: 25px;
   color: #458D7E;
+}
+footer .footer__lien .lien__center .center__lien:hover {
+  color: white;
 }
 footer ul {
   padding: 0px;
