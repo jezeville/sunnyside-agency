@@ -202,9 +202,9 @@ header {
         }
 
         .text__align {
-            width: 445px;
-            margin-top: 158px;
-            margin-left: 165px;
+            width: 50%;
+            margin-top: 20%;
+            margin-left: 10%;
 
             @include max-width($mobile) {
                 width: 327px;
@@ -287,6 +287,7 @@ header {
         background-image: url("image/photos/image-graphic-design.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         width: 50%;
 
         h2 {
@@ -302,6 +303,7 @@ header {
         background-image: url("image/photos/image-photography.jpg");
         background-repeat: no-repeat;
         background-size: cover;
+        background-position : center;
         width: 50%;
 
         h2 {
@@ -326,7 +328,7 @@ header {
 
     &__center {
         margin: auto;
-        width: 339px;
+        width: 80%;
         margin-top: 398px;
         text-align: center;
 
@@ -378,6 +380,7 @@ header {
     .client__profil {
         display: flex;
         justify-content: center;
+        flex-wrap : wrap;
 
         @include max-width($mobile) {
             flex-direction: column;
@@ -438,7 +441,7 @@ header {
 footer {
     margin-top: 160px;
     background-color: #90D4C6;
-    ;
+
 
     @include max-width($mobile) {
         margin-top: 86px;
@@ -446,6 +449,7 @@ footer {
 
     .footer__img {
         display: flex;
+        flex : wrap;
 
         @include max-width($mobile) {
             flex-wrap: wrap;

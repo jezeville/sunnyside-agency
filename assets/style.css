@@ -163,9 +163,9 @@ header .header__img {
   }
 }
 .textImage__text .text__align {
-  width: 445px;
-  margin-top: 158px;
-  margin-left: 165px;
+  width: 50%;
+  margin-top: 20%;
+  margin-left: 10%;
 }
 @media (max-width: 375px) {
   .textImage__text .text__align {
@@ -241,6 +241,7 @@ header .header__img {
   background-image: url("image/photos/image-graphic-design.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 50%;
 }
 .ImageImage .Image--1 h2 {
@@ -253,6 +254,7 @@ header .header__img {
   background-image: url("image/photos/image-photography.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 50%;
 }
 .ImageImage .Image--2 h2 {
@@ -271,7 +273,7 @@ header .header__img {
 }
 .ImageImage__center {
   margin: auto;
-  width: 339px;
+  width: 80%;
   margin-top: 398px;
   text-align: center;
 }
@@ -317,6 +319,7 @@ header .header__img {
 .client .client__profil {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 @media (max-width: 375px) {
   .client .client__profil {
@@ -379,6 +382,7 @@ footer {
 }
 footer .footer__img {
   display: flex;
+  flex: wrap;
 }
 @media (max-width: 375px) {
   footer .footer__img {
